@@ -62,7 +62,8 @@ func (u *ULID) UnmarshalJSON(data []byte) error {
 
 type Business struct {
 	ID        ULID      `json:"id" gorm:"type:char(26);primaryKey;"` // ULID as the primary key
-	Name      string    `json:"name"`
+	Name      string    `json:"name" gorm:"required;type:char(70)"`
+	Email     string    `json:"email" gorm:"type:char(100);"`
 	StripeId  string    `json:"stripeId"`
 	CreatedAt time.Time `json:"createdAt"`
 	UpdatedAt time.Time `json:"updatedAt"`
