@@ -1,0 +1,15 @@
+###-----------------------------------
+###--------Businesses ----------------
+###-----------------------------------
+
+POST  http://localhost:9333/api/businesses
+Content-Type: application/json
+
+{
+  "name": "BobBNB"
+}
+
+###
+GET  http://localhost:9333/api/businesses
+Accept: application/json
+
